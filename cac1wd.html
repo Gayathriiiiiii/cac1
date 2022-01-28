@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="cac1.css"/>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/bc4d8abcd3.js"
+      crossorigin="anonymous"
+    ></script>
+    
+  </head>
+  <body>
+    <div class="container">
+        <h1><centre>Feedback form</centre></h1>
+      
+      <form action="dashboard.html" onsubmit ="validateForm(event)" class="form" id="form">
+        <legend>Your Details</legend>
+        <br>
+        <div class="form-control">
+          <label for="firstname">First Name</label>
+          <input
+            type="text"
+            id="firstname"
+            onkeypress="return onlyChar (event)"
+            onkeyup=" checkName('firstname')"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+        <div class="form-control">
+          <label for="lastname">Last Name</label>
+          <input
+            type="text"
+            id="lastname"
+            onkeypress="return onlyChar (event)"
+            onkeyup=" checkName('lastname')"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            autocomplete="off"
+            onkeyup="checkEmail()"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input
+            type="text"
+            id="password"
+            onkeyup="checkPassword()"
+            autocomplete="off"
+          />
+
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+        <div class="form-control">
+          <label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            placeholder="Re-Enter Your password"
+            onkeyup="confirmPassword()"
+            autocomplete="off"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error</small>
+        </div>
+        <div  class="form-control">
+          <label for="address">Address</label>
+          <input type="text" size="50" maxlength="100"/>
+      </div>
+        <br>
+        <br>
+        <br>
+        <label for="Like-most">      
+            What did you like the most about the college?     
+            </label>
+                    <br>
+                    <input type="checkbox" 
+                           name="studeny" 
+                           value="yes">student
+                    <br>
+                    <input type="checkbox" 
+                           name="location" 
+                           value="yes">location
+                    <br>
+                    <input type="checkbox" 
+                           name="campus" 
+                           value="yes">campus
+                    <br>
+                    <input type="checkbox" 
+                           name="atmosphere" 
+                           value="yes">atmosphere
+                    <br>
+                    <input type="checkbox" 
+                           name="Dorm-rooms" 
+                           value="yes">Dorm-rooms
+                    <br>
+                    <input type="checkbox" 
+                           name="sports" 
+                           value="yes">sports
+                    <br>
+            </p>
+            </p>
+            <br>
+            <br>
+            How did you become instrested in this university?     
+            <br />     
+            <label>      
+            <input type="radio" name="option" value="friends" />      
+            friends     
+            </label>     
+            <label>      
+            <input type="radio" name="option" value="Telivision" />      
+            Telivision     
+            </label>     
+            <label>      
+            <input type="radio" name="option" value="Internet" />      
+            Internet     
+            </label>   
+            <input type="radio" name="option" value="others" />      
+            others     
+            </label>   
+            </p>    
+            <p>     
+            <label for="comments">      
+            Comments:     
+            </label>     
+            <br />     
+            <textarea rows="4" cols="40" id="comments">     
+            </textarea>   
+             </p>    
+            <label>     
+            <input type="checkbox" name="subscribe" checked="checked" />      
+            Sign me up for email updates    
+            </label>    
+            <br />    
+            
+            <button type = 'reset'>Reset</button>
+        <button type = 'submit' onsubmit ="validateForm(event)">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script src="cac1.js"></script>
+</html>
